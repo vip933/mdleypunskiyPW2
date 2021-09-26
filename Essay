@@ -1,0 +1,13 @@
+1 Question: what will happen if we forgot 
+Answer: If we forget to call view.addSubview(settingsButton) our button won’t appear on the screen. If we forget to tell the button where it should reside inside of the view it also won’t appear on the screen.
+
+2 Question: why is constant is negative? What would happen if it was positive? 
+Answer: It is negative because we are measuring out shift to left, and if constant is positive it will move our element to the right and it can go beyond the boundaries of the screen
+
+3 Question: What will happen if we remove “addSubview” line? What about the line with “= false”? 
+Answer: if we remove this live we won’t see our element, because it won’t be added on the screen. settingsButton.translatesAutoresizingMaskIntoConstraints = false makes compiler not to determinate constraints automatically, so we can add them by ourself.
+
+4 Question: Should we call setupButton before setupView? Why? 
+Answer: No, we shouldn’t, because elements who were called later will close elements which were called earlier and will make it impossible to see or use earlier elements.
+
+5 Question: After which method can we call it? Answer: I am going to call setupLocationToggle() after settings view setup, because otherwise it will be displayed incorrectly
